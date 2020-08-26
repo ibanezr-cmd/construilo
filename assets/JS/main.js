@@ -8,7 +8,10 @@ var tamb = '2';
 
     //Función de inicio
     function init () {
-        setbtnMed();
+        document.getElementById('btnChi').classList.remove('is-info');
+        document.getElementById('btnGde').classList.remove('is-info');
+        document.getElementById('btnMed').classList.add('is-info');
+        tamb = '2';
     }
 
 // Lógica de eventos de usuario
@@ -32,7 +35,14 @@ var tamb = '2';
     btnMed.addEventListener('click', setbtnMed);
     btnGde.addEventListener('click', setbtnGde);
 
+    function mensaje(mensaje) {
+        setTimeout(function(){
+            document.getElementById('MsgCostos').innerHTML = mensaje;
+        }, 50);
+    }
+
     function setbtnChi () {
+        mensaje('Calculando...');
         document.getElementById('btnMed').classList.remove('is-info');
         document.getElementById('btnGde').classList.remove('is-info');
         document.getElementById('btnChi').classList.add('is-info');
@@ -41,6 +51,7 @@ var tamb = '2';
     }
 
     function setbtnMed () {
+        mensaje('Calculando...');
         document.getElementById('btnChi').classList.remove('is-info');
         document.getElementById('btnGde').classList.remove('is-info');
         document.getElementById('btnMed').classList.add('is-info');
@@ -49,6 +60,7 @@ var tamb = '2';
     }
 
     function setbtnGde () {
+        mensaje('Calculando...');
         document.getElementById('btnChi').classList.remove('is-info');
         document.getElementById('btnMed').classList.remove('is-info');
         document.getElementById('btnGde').classList.add('is-info');
@@ -58,7 +70,8 @@ var tamb = '2';
     
     //Comunicación con API
     function GetValues (m2, tamb) {
-        fetch(SetUrl (m2, tamb))
+        if (m2 !== null && m2 !== '') { 
+            fetch(SetUrl (m2, tamb))
             .then(response => response.json())
             //.then(json => console.log(json))
             .then((json) => {
@@ -68,7 +81,10 @@ var tamb = '2';
                 console.log(json);
                 ShowMontos (json.CostTot, json.CostUnit);   
             })
-        
+        } else { 
+            alert('¡Ingresa los m2!');
+            mensaje('Ingresa los m2...');
+        }
     }
 
     //Adecuo la URL de consulta
@@ -81,11 +97,12 @@ var tamb = '2';
 
     //Muestros los datos consultados en la API
     function ShowMontos (CTot, CUnit) {
+        mensaje('Calculando...');
         CTot = (Number(CTot)/1000000).toFixed(2);
         CUnit = (Number(CUnit)/1000).toFixed(2);
         document.getElementById('MontoTot').innerHTML = 'Total $ ' + CTot + ' millones';
-        document.getElementById('UnitxM2').innerHTML = 'Unitario $ ' + CUnit + ' mil./m2';
-        document.getElementById('MsgCostos').innerHTML = '¡Listo! los costos estimados para ' + m2 + 'm2 son...';
+        document.getElementById('UnitxM2').innerHTML = 'Unitario $ ' + CUnit + ' mil. por m2';
+        mensaje('¡Listo! los costos estimados para ' + m2 + 'm2 son...');
     }
 
 

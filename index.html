@@ -207,16 +207,16 @@
                             <!-- bloque inicial -->
                             <div class="block mb-3">
                                 <div class="box has-text-centered">
-                                    <h2 class="subtitle is-3">¡Estima gratis el costo de tu casa!</h2>
+                                    <!-- <h2 class="subtitle is-3">¡Estima gratis el costo de tu casa!</h2> -->
                                     <div class="columns is-vcentered">
                                         <div class="column has-text-centered">
                                             <div class="field is-horizontal">
                                                 <div class="field-body">
-                                                    <div class="field">
-                                                        <p class="control has-icons-left has-icons-right">
+                                                    <div class="field is-narrow">
+                                                        <p class="control has-icons-left">
                                                             <input id="metros2" value="" type="text" class="input is-info is-rounded is-hovered" placeholder="Ingresá los m2">
                                                             <span class="icon is-small is-left">
-                                                                <i class="fas fa-ruler-combined"></i>
+                                                                <i class="fas fa-home"></i>
                                                             </span>
                                                         </p>
                                                     </div>
@@ -226,9 +226,9 @@
                                         <div class="column has-text-centered">
                                                 <p class="pb-1">... y selecciona el tamaño de los ambientes</p>
                                                 <div class="buttons has-addons is-centered">
-                                                    <button id="btnChi" class="button">Chicos</button>
-                                                    <button id="btnMed" class="button">Medianos</button>
-                                                    <button id="btnGde" class="button">Grandes</button>
+                                                    <button id="btnChi" class="button is-small">Chicos</button>
+                                                    <button id="btnMed" class="button is-small">Medianos</button>
+                                                    <button id="btnGde" class="button is-small">Grandes</button>
                                                 </div>
                                         </div>
                                     </div>
@@ -245,7 +245,7 @@
                                             <span class="tag is-info is-light is-large">
                                                 <b id="MontoTot">Total $ ... millones</b></span><br>
                                             <span class="tag is-info is-light is-large">
-                                                <b id="UnitxM2" >Unitario $ ... mil./m2</b></span>
+                                                <b id="UnitxM2" >Unitario $ ... mil. por m2</b></span>
                                         </div>
                                     </div>
                                 </div>
@@ -253,19 +253,19 @@
                             <!-- bloque ambientes -->
                             <div class="block mb-3">
                                 <div class="box">
-                                    <p class="subtitle is-5 pb-4 has-text-centered"><b>¡PROXIMAMENTE!</b> Podrás mejorar la estimación seleccionando los <b>ambientes</b> que queres</p>
+                                    <p class="subtitle is-5 pb-4 has-text-centered">Podés mejorar la estimación seleccionando los <b>ambientes</b> que queres</p>
                                     <!-- Cocina-comedor-estar -->
                                     <div class="columns">
                                         <div class="column pt-1 pb-1">
                                             <p><b>Cocina</b></p>
-                                            <div class="control">
-                                                <label for="" class="radio pt-2 pb-3">
-                                                    <input type="radio" name="cocina" class="radio" checked> Cocina separada
-                                                </label><br>
-                                                <label for="" class="radio">
-                                                    <input type="radio" name="cocina" class="radio"> Cocina-comedor
-                                                </label>
-                                            </div>
+                                                <div class="control">
+                                                    <label for="" class="radio pt-2 pb-3">
+                                                        <input type="radio" name="cocina" class="radio" checked> Cocina separada
+                                                    </label><br>
+                                                    <label for="" class="radio">
+                                                        <input type="radio" name="cocina" class="radio"> Cocina-comedor
+                                                    </label>
+                                                </div>
                                         </div>
                                         <div class="column pt-1 pb-1">
                                             <p><b>Comedor</b></p>
@@ -301,7 +301,7 @@
                                             </div>
                                         </div>
                                         <div class="column pt-1 pb-1">
-                                            <div class="field is-horizontal">
+                                            <div class="field is-horizontal has-addons">
                                                 <p class="control">
                                                     <span class="select is-small">
                                                         <select name="" id="habit2">
@@ -310,10 +310,10 @@
                                                             <option value="">2</option>
                                                         </select>
                                                     </span>
-                                                    <p>Habitación doble</p>
+                                                    <p>. Habitación doble</p>
                                                 </p>
                                             </div>
-                                            <div class="field is-horizontal">
+                                            <div class="field is-horizontal has-addons">
                                                 <p class="control">
                                                     <span class="select is-small">
                                                         <select name="" id="habits">
@@ -322,12 +322,12 @@
                                                             <option value="">2</option>
                                                         </select>
                                                     </span>
-                                                    <p>Habitación simple</p>
+                                                    <p>. Habitación simple</p>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="column pt-1 pb-1">
-                                            <div class="field is-horizontal">
+                                        <div class="column pt-1 pb-1 is-vcentered">
+                                            <div class="field is-horizontal has-addons">
                                                 <p class="control">
                                                     <span class="select is-small">
                                                         <select name="" id="bañog">
@@ -335,7 +335,7 @@
                                                             <option value="">2</option>
                                                         </select>
                                                     </span>
-                                                    <p>Baño gerneral</p>
+                                                    <p>. Baño general</p>
                                                 </p>
                                             </div>
                                             <div class="control">
