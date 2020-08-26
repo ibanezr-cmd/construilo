@@ -103,6 +103,7 @@ var tamb = '2';
         document.getElementById('MontoTot').innerHTML = 'Total $ ' + CTot + ' millones';
         document.getElementById('UnitxM2').innerHTML = 'Unitario $ ' + CUnit + ' mil. por m2';
         mensaje('¡Listo! los costos estimados para ' + m2 + 'm2 son...');
+        window.location.hash = 'resultados';
     }
 
 
