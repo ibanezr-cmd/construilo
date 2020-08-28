@@ -8,9 +8,9 @@ var tamb = '2';
 
     //Función de inicio
     function init () {
-        document.getElementById('btnChi').classList.remove('is-info');
-        document.getElementById('btnGde').classList.remove('is-info');
-        document.getElementById('btnMed').classList.add('is-info');
+        document.getElementById('btnChi').classList.remove('is-active');
+        document.getElementById('btnGde').classList.remove('is-active');
+        document.getElementById('btnMed').classList.add('is-active');
         tamb = '2';
     }
 
@@ -43,27 +43,27 @@ var tamb = '2';
 
     function setbtnChi () {
         mensaje('Calculando...');
-        document.getElementById('btnMed').classList.remove('is-info');
-        document.getElementById('btnGde').classList.remove('is-info');
-        document.getElementById('btnChi').classList.add('is-info');
+        document.getElementById('btnMed').classList.remove('is-active');
+        document.getElementById('btnGde').classList.remove('is-active');
+        document.getElementById('btnChi').classList.add('is-active');
         tamb = '1';
         GetValues(m2,tamb);
     }
 
     function setbtnMed () {
         mensaje('Calculando...');
-        document.getElementById('btnChi').classList.remove('is-info');
-        document.getElementById('btnGde').classList.remove('is-info');
-        document.getElementById('btnMed').classList.add('is-info');
+        document.getElementById('btnChi').classList.remove('is-active');
+        document.getElementById('btnGde').classList.remove('is-active');
+        document.getElementById('btnMed').classList.add('is-active');
         tamb = '2';
         GetValues(m2,tamb);
     }
 
     function setbtnGde () {
         mensaje('Calculando...');
-        document.getElementById('btnChi').classList.remove('is-info');
-        document.getElementById('btnMed').classList.remove('is-info');
-        document.getElementById('btnGde').classList.add('is-info');
+        document.getElementById('btnChi').classList.remove('is-active');
+        document.getElementById('btnMed').classList.remove('is-active');
+        document.getElementById('btnGde').classList.add('is-active');
         tamb = '3';
         GetValues(m2,tamb);
     }
