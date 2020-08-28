@@ -30,9 +30,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="css/normalize.min.css">
   
+  <style>
+      a {color:black}
+  </style>
   
 </head>
 <body>
+
 
 <!-- Analytics -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -223,13 +227,22 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="column has-text-centered">
+                                        <!-- <div class="column has-text-centered">
                                                 <p class="pb-1">... y selecciona el tamaño de los ambientes</p>
                                                 <div class="buttons has-addons is-centered">
                                                     <button id="btnChi" class="button is-small">Chicos</button>
                                                     <button id="btnMed" class="button is-small">Medianos</button>
                                                     <button id="btnGde" class="button is-small">Grandes</button>
                                                 </div>
+                                        </div> -->
+                                        <div class="column has-text-centered">
+                                            <p class="pb-1">... y selecciona el tamaño de los ambientes</p>
+                                            <div class="tabs is-centered">
+                                                <ul>
+                                                <li id="btnChi" class=""><a>Chicos</a></li>
+                                                <li id="btnMed" class=""><a>Medianos</a></li>
+                                                <li id="btnGde" class=""><a>Grandes</a></li>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -253,56 +266,51 @@
                             <!-- bloque ambientes -->
                             <div class="block mb-3">
                                 <div class="box">
-                                    <p class="subtitle is-5 pb-4 has-text-centered"><b>¡PROXIMAMENTE!...
-                                    </b> podrás mejorar la estimación seleccionando los <b>ambientes</b> que queres</p>
+                                    <p class="subtitle is-5 pb-4 has-text-centered"><b>¡PROXIMAMENTE!...</b>podrás mejorar la estimación seleccionando los <b>ambientes</b> que queres</p>
                                     <!-- Cocina-comedor-estar -->
+                                    <h2 class="subtitle is-5 has-text-centered"><b>Cocina, comedor y estar</b></h2>
                                     <div class="columns">
                                         <div class="column pt-1 pb-1">
-                                            <p><b>Cocina</b></p>
-                                                <div class="control">
-                                                    <label for="" class="radio pt-2 pb-3">
-                                                        <input type="radio" name="cocina" class="radio" checked> Cocina separada
-                                                    </label><br>
-                                                    <label for="" class="radio">
-                                                        <input type="radio" name="cocina" class="radio"> Cocina-comedor
-                                                    </label>
-                                                </div>
-                                        </div>
-                                        <div class="column pt-1 pb-1">
-                                            <p><b>Comedor</b></p>
-                                            <div class="control">
-                                                <label for="" class="radio pt-2 pb-3">
-                                                    <input type="radio" name="comedor" class="radio" disabled> Comedor separado
-                                                </label><br>
-                                                <label for="" class="radio">
-                                                    <input type="radio" name="comedor" class="radio"> Estar-comedor
-                                                </label>
+                                            <div class="tabs is-centered">
+                                                <ul>
+                                                <li class="is-active" style="pointer-events: none;
+                                                cursor: default"><a>Cocina separada</a></li>
+                                                <li class="" ><a>Cocina-comedor</a></li>
                                             </div>
                                         </div>
                                         <div class="column pt-1 pb-1">
-                                            <p><b>Estar</b></p>
-                                            <div class="control">
-                                                <label for="" class="radio pt-2 pb-3">
-                                                    <input type="radio" name="estar" class="radio"> Estar separado
-                                                </label><br>
+                                            <div class="tabs is-centered">
+                                                <ul>
+                                                <li class="is-active" style="pointer-events: none;
+                                                cursor: default"><a>Comedor separado</a></li>
+                                                <li class="" style="pointer-events: none;
+                                                cursor: default" ><a>Estar-comedor</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="column pt-1 pb-1">
+                                            <div class="tabs is-centered">
+                                                <ul>
+                                                <li class="is-active" style="pointer-events: none;
+                                                cursor: default"><a>Estar separado</a></li>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Habitaciones y baños -->
-                                    <p class="pt-2 pb-2"><b>Habitaciones y baños</b></p>
-                                    <div class="columns">
+                                    <h2 class="subtitle is-5 has-text-centered"><b>Habitaciones y baños</b></h2>
+                                    <div class="columns is-centered">
                                         <div class="column pt-1 pb-1">
-                                            <div class="control">
-                                                <label for="" class="radio pt-2 pb-3">
-                                                    <input type="radio" name="habit-ppal" class="radio" checked> Habitación principal
-                                                </label><br>
-                                                <label for="" class="radio">
-                                                    <input type="radio" name="habit-ppal" class="radio"> Habitación ppal. con baño
-                                                </label>
+                                            <div class="tabs is-centered">
+                                                <ul>
+                                                <li class="is-active" style="pointer-events: none;
+                                                cursor: default"><a>Habit. ppal.</a></li>
+                                                <li class="" ><a>Habit. ppal. c/ baño</a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="column pt-1 pb-1">
-                                            <div class="field is-horizontal has-addons">
+                                        <div class="column pt-3 pb-3">
+                                            <div class="field has-addons">
+                                                <p class="control is-expanded"></p>
                                                 <p class="control">
                                                     <span class="select is-small">
                                                         <select name="" id="habit2">
@@ -311,42 +319,98 @@
                                                             <option value="">2</option>
                                                         </select>
                                                     </span>
-                                                    <p>. Habitación doble</p>
                                                 </p>
+                                                <span class="tag is-medium is-info is-light">Habitaciones dobles</span>
+                                                <p class="control is-expanded"></p>
                                             </div>
+                                        </div>
+                                        <div class="column pt-3 pb-3">    
                                             <div class="field is-horizontal has-addons">
+                                                <p class="control is-expanded"></p>
                                                 <p class="control">
                                                     <span class="select is-small">
-                                                        <select name="" id="habits">
+                                                        <select name="" id="habit2">
                                                             <option value="">0</option>
                                                             <option value="">1</option>
                                                             <option value="">2</option>
                                                         </select>
                                                     </span>
-                                                    <p>. Habitación simple</p>
                                                 </p>
+                                                <span class="tag is-medium is-info is-light">Habitaciones simples</span>
+                                                <p class="control is-expanded"></p>
                                             </div>
                                         </div>
-                                        <div class="column pt-1 pb-1 is-vcentered">
+                                    </div>
+                                    <div class="columns is-centered">
+                                        <div class="column pt-3 pb-3">
                                             <div class="field is-horizontal has-addons">
+                                                <p class="control is-expanded"></p>
                                                 <p class="control">
                                                     <span class="select is-small">
-                                                        <select name="" id="bañog">
+                                                        <select name="" id="habit2">
+                                                            <option value="">0</option>
                                                             <option value="">1</option>
                                                             <option value="">2</option>
                                                         </select>
                                                     </span>
-                                                    <p>. Baño general</p>
                                                 </p>
+                                                <span class="tag is-medium is-info is-light">Baños c/ ducha o bañera</span>
+                                                <p class="control is-expanded"></p>
                                             </div>
-                                            <div class="control">
-                                                <label for="" class="radio">
-                                                    <input type="radio" name="toilette" class="radio"> Toilette
-                                                </label>
+                                        </div>
+                                        <div class="column pt-3 pb-3">
+                                            <div class="field is-horizontal has-addons">
+                                                <p class="control is-expanded"></p>
+                                                <p class="control">
+                                                    <span class="select is-small">
+                                                        <select name="" id="toil">
+                                                            <option value="">0</option>
+                                                            <option value="">1</option>
+                                                            <option value="">2</option>
+                                                        </select>
+                                                    </span>
+                                                </p>
+                                                <span class="tag is-medium is-info is-light">Toilette</span>
+                                                <p class="control is-expanded"></p>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Otros ambientes... -->
+                                    <h2 class="subtitle is-5 has-text-centered"><b>Otros ambientes</b></h2>
+                                    <div class="columns is-centered">
+                                        <div class="column pt-1 pb-1">
+                                            <div class="field has-addons">
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Lavadero
+                                            </label>
+                                            </div>
+                                        </div>
+                                        <div class="column pt-1 pb-1">
+                                            <div class="field has-addons">
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Garage
+                                            </label>
+                                            </div>
+                                        </div>
+                                        <div class="column pt-1 pb-1">    
+                                            <div class="field has-addons">
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Estudio
+                                            </label>
+                                            </div>
+                                        </div>
+                                        <div class="column pt-1 pb-1">
+                                            <div class="field has-addons">
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Recepción
+                                            </label>
+                                            </div>
+                                        </div>
+                                    </div>    
                                 </div>
                             </div>
                         </div>
