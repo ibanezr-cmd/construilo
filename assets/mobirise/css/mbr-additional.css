@@ -1914,10 +1914,11 @@ section.lazy-placeholder:after {
   margin: 0;
   padding-top: 1.5rem;
 }
-.cid-rXSnDT8zsz a:not([href]):not([tabindex]) {
+/* Modificación ROI 200827 */
+/* .cid-rXSnDT8zsz a:not([href]):not([tabindex]) {
   color: #fff;
   border-radius: 3px;
-}
+} */
 .cid-rXSnDT8zsz .google-map {
   height: 50rem;
   position: relative;
